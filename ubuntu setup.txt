@@ -1,0 +1,42 @@
+#update your ubuntu software
+
+sudo apt-get update
+sudo apt-get upgrade
+
+#trouble shooting
+#sudo apt-get update --fix-missing
+
+#setup git
+sudo apt install git
+
+#setup graphiv
+sudo apt install graphiv
+
+
+#set up dev enviroment
+sudo apt-get install build-essential
+sudo apt install autoconf
+sudo apt install libtool
+sudo apt-get install manpages-dev
+
+
+#download and install buddy - optional since buddy is embedded into the source
+cd ~
+git clone https://github.com/utwente-fmt/buddy.git buddy
+cd buddy
+sudo apt autoremove
+autoreconf -i
+./configure --includedir=/usr/local/include
+make
+sudo make install
+echo $LD_LIBRARY_PATH
+LD_LIBRARY_PATH=/usr/local/lib
+export LD_LIBRARY_PATH
+
+
+#download this code
+cd ~
+git clone https://Bikxs@bitbucket.org/Bikxs/bitcoin.git bitcoin++
+cd bitcoin++/Debug
+make clean
+make

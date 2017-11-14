@@ -1,0 +1,115 @@
+<testsuites>
+	<testsuite name="words suite" tests="14">
+		<testcase classname="words suite" name="tests::testInitialiseVarBit"/>
+		<testcase classname="words suite" name="tests::testWordConstructionsWithVariables"/>
+		<testcase classname="words suite" name="tests::testWordInitializationFromInt">
+			<failure message="../src/sources/tests.cpp:104 testWordInitializationFromInt: word integer constructor a = 00000000 expected:	00000000000000000000000000000000	but was:	00000000000000000000000000101010	">
+testWordInitializationFromInt: word integer constructor a = 00000000 expected:	00000000000000000000000000000000	but was:	00000000000000000000000000101010	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordHexRepresentationFromString">
+			<failure message="../src/sources/tests.cpp:117 testWordHexRepresentationFromString: word hex representation from string expected:	00000000	but was:	F956C25B	">
+testWordHexRepresentationFromString: word hex representation from string expected:	00000000	but was:	F956C25B	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordAssignmentOperator">
+			<failure message="../src/sources/tests.cpp:122 testWordAssignmentOperator: word hex representation for p=0b1,00000000000000000000000000000000 expected:	00000000	but was:	00000001	">
+testWordAssignmentOperator: word hex representation for p=0b1,00000000000000000000000000000000 expected:	00000000	but was:	00000001	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordNOT">
+			<failure message="../src/sources/tests.cpp:164 testWordNOT: word negation of c (NOT C) c=00000000 a = FFFFFFFF expected:	11111111111111111111111111111111	but was:	11111111111111100111100101100001	">
+testWordNOT: word negation of c (NOT C) c=00000000 a = FFFFFFFF expected:	11111111111111111111111111111111	but was:	11111111111111100111100101100001	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordAND">
+			<failure message="../src/sources/tests.cpp:196 testWordAND: word z = x.And(y) 1 expected:	(v1 &amp; v33)	but was:	v641	">
+testWordAND: word z = x.And(y) 1 expected:	(v1 &amp; v33)	but was:	v641	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordOR">
+			<failure message="../src/sources/tests.cpp:213 testWordOR: word  z = x.Or(y) expected:	(v1 | v33)	but was:	v657	">
+testWordOR: word  z = x.Or(y) expected:	(v1 | v33)	but was:	v657	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordXOR">
+			<failure message="../src/sources/tests.cpp:219 testWordXOR: word XOR function a = b.Xor(c) expected:	00000000	but was:	00000001	">
+testWordXOR: word XOR function a = b.Xor(c) expected:	00000000	but was:	00000001	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordADD">
+			<failure message="../src/sources/tests.cpp:142 testWordADD: word addition a= b+c expected:	00000000	but was:	00030D3D	">
+testWordADD: word addition a= b+c expected:	00000000	but was:	00030D3D	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordMixedOperations">
+			<failure message="../src/sources/tests.cpp:235 testWordMixedOperations: s.Not() expected:	v1	but was:	!(v1)	">
+testWordMixedOperations: s.Not() expected:	v1	but was:	!(v1)	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordShifting">
+			<failure message="../src/sources/tests.cpp:275 testWordShifting: word integer assignment d expected:	00000000	but was:	00000004	">
+testWordShifting: word integer assignment d expected:	00000000	but was:	00000004	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordRightRotate">
+			<failure message="../src/sources/tests.cpp:312 testWordRightRotate: word integer rotation d=0x00000010 right 5 times d=00000000000000000000000000000000 n=00000000000000000000000000000000 expected:	00000000	but was:	80000000	">
+testWordRightRotate: word integer rotation d=0x00000010 right 5 times d=00000000000000000000000000000000 n=00000000000000000000000000000000 expected:	00000000	but was:	80000000	
+			</failure>
+		</testcase>
+		<testcase classname="words suite" name="tests::testWordLeftRotate">
+			<failure message="../src/sources/tests.cpp:318 testWordLeftRotate: word integer rotation d=0x10 left 5 times expected:	00000000	but was:	00000200	">
+testWordLeftRotate: word integer rotation d=0x10 left 5 times expected:	00000000	but was:	00000200	
+			</failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="SHA256 suite" tests="9">
+		<testcase classname="SHA256 suite" name="tests::testCH">
+			<failure message="../src/sources/tests.cpp:333 testCH: Ch(a,b,c) expected:	00000000	but was:	000020EB	">
+testCH: Ch(a,b,c) expected:	00000000	but was:	000020EB	
+			</failure>
+		</testcase>
+		<testcase classname="SHA256 suite" name="tests::testMaj">
+			<failure message="../src/sources/tests.cpp:339 testMaj: Maj(a,b,c) expected:	00000000	but was:	000020D2	">
+testMaj: Maj(a,b,c) expected:	00000000	but was:	000020D2	
+			</failure>
+		</testcase>
+		<testcase classname="SHA256 suite" name="tests::testEpsilon0">
+			<failure message="../src/sources/tests.cpp:346 testEpsilon0: Epsilon0(c) expected:	00000000	but was:	FE1EC44F	">
+testEpsilon0: Epsilon0(c) expected:	00000000	but was:	FE1EC44F	
+			</failure>
+		</testcase>
+		<testcase classname="SHA256 suite" name="tests::testEpsilon1">
+			<failure message="../src/sources/tests.cpp:379 testEpsilon1: Epsilon1(c) expected:	00000000	but was:	1432E008	">
+testEpsilon1: Epsilon1(c) expected:	00000000	but was:	1432E008	
+			</failure>
+		</testcase>
+		<testcase classname="SHA256 suite" name="tests::testSigman0">
+			<failure message="../src/sources/tests.cpp:387 testSigman0: Sigma0(c) expected:	00000000	but was:	C359E41F	">
+testSigman0: Sigma0(c) expected:	00000000	but was:	C359E41F	
+			</failure>
+		</testcase>
+		<testcase classname="SHA256 suite" name="tests::testSigma1">
+			<failure message="../src/sources/tests.cpp:395 testSigma1: Sigma1(c) expected:	00000000	but was:	E3703D05	">
+testSigma1: Sigma1(c) expected:	00000000	but was:	E3703D05	
+			</failure>
+		</testcase>
+		<testcase classname="SHA256 suite" name="tests::testASCIItoHEX">
+			<failure message="../src/sources/tests.cpp:404 testASCIItoHEX: ASCII &apos;a&apos; in hex expected:	00000000	but was:	00000061	">
+testASCIItoHEX: ASCII &apos;a&apos; in hex expected:	00000000	but was:	00000061	
+			</failure>
+		</testcase>
+		<testcase classname="SHA256 suite" name="tests::testSHA256">
+			<failure message="../src/sources/tests.cpp:70 testSha256: Hashing &apos;&apos; expected:	0000000000000000000000000000000000000000000000000000000000000000	but was:	E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855	">
+testSha256: Hashing &apos;&apos; expected:	0000000000000000000000000000000000000000000000000000000000000000	but was:	E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855	
+			</failure>
+		</testcase>
+		<testcase classname="SHA256 suite" name="tests::testDoubleSHA256">
+			<failure message="../src/sources/tests.cpp:75 testDoubleSha256: Double Hashing &apos;Across an inclined taxpayer sings Biko. Biko alternates a brother. The bugger accounts Kenya throughout the beast. When can the crack complete the untrue space?&apos; expected:	0000000000000000000000000000000000000000000000000000000000000000	but was:	BEF42CCB2F9A7FCAC6A29B1ECCC25A41AD4AD981EC530DFAB44A32B747BE5159	">
+testDoubleSha256: Double Hashing &apos;Across an inclined taxpayer sings Biko. Biko alternates a brother. The bugger accounts Kenya throughout the beast. When can the crack complete the untrue space?&apos; expected:	0000000000000000000000000000000000000000000000000000000000000000	but was:	BEF42CCB2F9A7FCAC6A29B1ECCC25A41AD4AD981EC530DFAB44A32B747BE5159	
+			</failure>
+		</testcase>
+	</testsuite>
+	<testsuite name="Bitcoins suite" tests="1">
+		<testcase classname="Bitcoins suite" name="tests::testBitCoinHashes">
+			<failure message="../src/sources/tests.cpp:463 testBitCoinHash: Block#286819 expected:	0000000000000000000000000000000000000000000000000000000000000000	but was:	0000000000000000E067A478024ADDFECDC93628978AA52D91FABD4292982A50	

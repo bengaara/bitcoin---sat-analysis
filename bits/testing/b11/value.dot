@@ -1,0 +1,16 @@
+digraph G {
+0 [shape=box, label="0", style=filled, shape=box, height=0.3, width=0.3];
+1 [shape=box, label="1", style=filled, shape=box, height=0.3, width=0.3];
+1389 [label="11"];
+1389 -> 1387 [style=dotted];
+1389 -> 1388 [style=filled];
+1387 [label="43"];
+1387 -> 0 [style=dotted];
+1387 -> 152 [style=filled];
+152 [label="75"];
+152 -> 0 [style=dotted];
+152 -> 1 [style=filled];
+1388 [label="43"];
+1388 -> 152 [style=dotted];
+1388 -> 1 [style=filled];
+}
